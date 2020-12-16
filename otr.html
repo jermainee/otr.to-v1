@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>What is OTR? - otr.to</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="f.css" rel="stylesheet" type="text/css">
+    <link href="filedrop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/rrssb.css"/>
+    <meta name="robots" content="noindex"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39078917-19"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-39078917-19');
+    </script>
+    <script data-ad-client="ca-pub-2487469468084031" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <link rel="icon" type="image/png" href="ico.ico"/>
+</head>
+<body>
+<div class="tabl">
+    <div class="Row">
+        <div class="menu"><img src="logo.png" class="logo">
+            <table class="bm">
+                <tr>
+                    <td class="select"></td>
+                    <td><a href="https://otr.to/"><i class="fa fa-comment-o fa-2x"></i></a></td>
+                    <td><a class="non" href="https://otr.to/">Secure p2p Chat</a></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+                    <td><a href="https://nachricht.co?source=otr"><i class="fa fa-file-text-o fa-2x"></i></a></td>
+                    <td><a class="non" href="https://nachricht.co?source=otr">Self Destructing Message</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="/otr.html"><i class="fa fa-question fa-2x"></i></a></td>
+                    <td><a class="non" href="/otr.html">About OTR</a></td>
+                </tr>
+            </table>
+
+
+        </div>
+        <div class="ri">
+            <div style="margin: 0 1rem; text-align: left">
+                <h1>What is OTR (or Off-the-Record) messaging?</h1>
+                <p>OTR (or Off-the-Record) messaging is a message encryption protocol for instant messaging. It governs the ongoing update and management of short-lived session keys.</p>
+
+                <p>
+                    In contrast to the transmission of encrypted messages using OpenPGP (or, in rare cases, using an X.509 certificate), with off-the-record messaging it is no longer possible to determine later whether a particular key was used by a particular person (principle of plausible deniability). This means that once the conversation has ended, no one (not even either of the two communication partners) can prove that one of the communication partners made a certain statement.
+                </p>
+
+                <p>
+                    This principle is implemented through the combined use of the symmetric cryptographic method Advanced Encryption Standard (AES), Diffie-Hellman key exchange, and the cryptographic hash function SHA-1. A program library and numerous instant messaging programs are available that can use the protocol either directly or via additional modules.
+                </p>
+
+                <h2>Project's statutes</h2>
+
+                <h3>Encryption</h3>
+                <p>No one can read the messages.</p>
+
+                <h3>Authentication</h3>
+                <p>You can be sure that the recipient is who you think he is.</p>
+
+                <h3>Deniability</h3>
+                <p>Encrypted messages do not contain an electronic signature. It is therefore possible for someone to forge messages after a conversation so that they appear to come from oneself. However, during a conversation, the recipient can be certain that the messages received are authentic and unaltered.</p>
+
+                <h3>Perfect Forward Secrecy</h3>
+                <p>If the (long-lived) private key falls into the hands of a third party, this has no effect on the compromise of previously made calls: The calls cannot be subsequently decrypted with it.</p>
+            </div>
+            <br />
+            <div style="text-align: center; font-size: .8rem;">
+                <a href="/privacy.html" title="Privacy Policy">Privacy</a> &middot; <a href="/imprint.html" title="Imprint">Imprint</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="cookieConsent" style="display: none; position: fixed; width: 100%; height: 100%; top:0; left:0; background-color: rgba(0, 0, 0, .5);">
+    <div style="background: #fff; padding: 2rem; border-radius: 0 0 4px 4px; width: 95vw; max-width: 400px; font-size: 1rem; margin: 0 auto;">
+        🍪 We use cookies on our website. Some of these cookies are essential, while others help us make otr.to even better. You can refuse or accept them and help us significantly. See also our <a href="/privacy.html" title="Privacy Policy">privacy policy</a>.
+
+        <button onclick="acceptCookieConsent()" style="background-color: #1f962d; color: #fff; border:0; text-shadow:none; font-weight: bold; width: 100%; border: 0; padding: .5rem 1rem; font-size: 1.1rem;margin-top: 1rem;">accept ✓</button>
+        <br/>
+        <button onclick="essentialCookieConsent()" style="background-color: #fff; color: #999; border:0; text-shadow:none; font-weight: normal; width: 100%; border: 0; padding: .5rem 1rem; font-size: .8rem;margin-top: .5rem;">only essential cookies</button>
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const lsConsent = localStorage.getItem('consent');
+        const ssConsent = sessionStorage.getItem('consent');
+
+        if (!lsConsent && !ssConsent) {
+            const cookieConsent = document.getElementById('cookieConsent');
+            cookieConsent.style.display = 'block';
+        }
+    });
+
+    const acceptCookieConsent = () => {
+        localStorage.setItem('consent', 'accepted');
+        document.location = '/';
+    };
+
+    const essentialCookieConsent = () => {
+        sessionStorage.setItem('consent', 'essential');
+        document.location = '/';
+    };
+</script>
+</body>
+</html>
