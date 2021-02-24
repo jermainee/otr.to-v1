@@ -279,7 +279,7 @@
         // Show this peer's ID.
         peer.on('open', function (id) {
             $('#pid').text(id);
-            $('#purl').text("https://otr.to/#" + id);
+            $('#purl').text("https://v1.otr.to/#" + id);
             $(function () {
                 $("#pid").click(function () {
                     SelectText("pid");
@@ -453,7 +453,7 @@
 
                                                     //console.log("YOU OTR:" + msg);
                                                     var messageBox = $c.find('.messages');
-                                                    var msg = '<a href="https://otr.to/f/?' + data + '#' + base64 + '" target="_blank">' + file.name + '</a>';
+                                                    var msg = '<a href="https://v1.otr.to/f/?' + data + '#' + base64 + '" target="_blank">' + file.name + '</a>';
                                                     c.send('?MSG:' + msg);
                                                     messageBox.append('<div><span class="you">You: </span> <i class="fa fa-paperclip fa-2x"></i>&nbsp;' + msg + '</div>');
                                                     messageBox.scrollTop(messageBox[0].scrollHeight);
@@ -904,7 +904,7 @@
                         </td>
                         <td>
                             <input type="button" type="submit" value="open new chat"
-                                   onClick="window.open('https://otr.to/');">
+                                   onClick="window.open('https://v1.otr.to/');">
                         </td>
                         <td>
                             <a class="linktip" href="#" title="Send encrypted file"><i class="fa fa-paperclip fa-2x" id="paperclip"></i></a>
